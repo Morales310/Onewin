@@ -23,6 +23,14 @@
     box-sizing: border-box;
 }
 
+/* Add this block to optimize image rendering and crispness */
+img {
+    image-rendering: -webkit-optimize-contrast; /* Crisp rendering for Safari/Chrome */
+    image-rendering: crisp-edges;               /* Standard syntax for modern browsers */
+    transform: translateZ(0);                   /* Forces hardware acceleration for smoother rendering */
+    backface-visibility: hidden;                /* Fixes sub-pixel blurring during scale animations */
+}
+
 html {
     scroll-behavior: smooth;
 }
