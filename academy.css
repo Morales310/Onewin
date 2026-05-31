@@ -299,6 +299,141 @@ nav {
 }
 
 /* ==========================================
+   10. BOOTSTRAP CAROUSEL STYLING (#stars)
+   ========================================== */
+#stars {
+    padding: 100px 10%;
+    background-color: #0b0b0b; /* Deep dark background to make basketball images pop */
+    color: #ffffff;
+}
+
+.superstars {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.superstars h2 {
+    font-family: var(--font-heading);
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.superstars h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-red);
+    margin: 12px auto 0 auto;
+}
+
+.star-intro {
+    font-size: 16px;
+    color: #b5b5b5;
+    max-width: 750px;
+    margin: 15px auto 0 auto;
+}
+
+/* Adjusting the main slider box frame */
+#carouselExampleAutoplaying {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow:auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+
+/* Enforcing strict uniform sizes for player image slides */
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit:contain ; /* Prevents stretching */
+    filter: brightness(0.75); /* Darkens slightly so caption text is crisp and readable */
+}
+
+/* Sleek Premium Caption Background Overlay */
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 20px 30px 20px;
+}
+
+.carousel-caption h5 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.carousel-caption p {
+    font-size: 14px;
+    color: #e5e5e7;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Customizing Navigation Indicators & Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(17, 17, 17, 0.6);
+    padding: 20px;
+    border-radius: 50%;
+    background-size: 50%;
+    transition: var(--transition);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--primary-red);
+}
+
+/* ==========================================
+   11. HISTORY GALLERY EXPANSION
+   ========================================== */
+/* Upgrading the grid from 2 items to an elegant 3-column premium photo stack */
+.history-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* Extra media responsive layout adjustments for the stars slider */
+@media screen and (max-width: 768px) {
+    #stars {
+        padding: 60px 5%;
+    }
+    .superstars h2 {
+        font-size: 34px;
+    }
+    .carousel-item img {
+        height: 350px; /* Shorter display aspect window on small phone viewports */
+    }
+    .carousel-caption h5 {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================
    6. SCHEDULE SECTION
    ========================================== */
 #schedule {
